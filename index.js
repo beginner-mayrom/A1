@@ -10,6 +10,9 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+//arquivos estáticos
+app.use('/public', express.static('public/css'));
+
 //rota home
 app.get('/', function (req, res) {
 

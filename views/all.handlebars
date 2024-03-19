@@ -1,0 +1,10 @@
+{{#each products}}
+    <h1>Id: {{id}}</h1>
+    <h2>Nome: {{name}}</h2>
+    <h3>Quantidade: {{amount}}</h3>
+    <h4>Descrição: {{description}}</h4>
+    <p>Data: {{createdAt}}</p>
+    <a href="/alter/{{id}}"><button>Alterar</button></a>
+    <a href="/delete/{{id}}"><button>Deletar</button></a>
+    <hr>
+{{/each}}

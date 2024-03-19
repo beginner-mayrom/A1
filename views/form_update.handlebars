@@ -1,0 +1,21 @@
+<form action="/update" method="POST">
+
+    {{#each products}}
+        <p>Id: </p>
+        <input type="text" name="id" value="{{id}}" readonly="true">
+
+        <p>Nome: </p>
+        <input type="text" name="name" value="{{name}}">
+
+        <p>Quantidade: </p>
+        <input type="number" name="amount" value="{{amount}}">
+
+        <p>Descrição: </p>
+        <input type="text" name="description" value="{{description}}"><br>
+
+        <input type="submit" value="Alter">
+        <hr>
+    {{/each}}
+
+
+</form>

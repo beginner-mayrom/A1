@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 //arquivos estáticos
 app.use('/public', express.static('public/css'));
 
+app.use('/imgs', express.static('public/imgs'));
+
 //rota home
 app.get('/', function (req, res) {
 

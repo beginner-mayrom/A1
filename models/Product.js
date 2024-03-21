@@ -1,7 +1,6 @@
 const db = require('./db');
 
-//criando a tabela postagem
-
+//criando a tabela Produto
 const Product = db.sequelize.define('product',{
     name: {
         type: db.Sequelize.TEXT

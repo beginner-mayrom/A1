@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //arquivos estáticos
-app.use('/public', express.static('public/css'));
+app.use('/css', express.static('public/css'));
 
 app.use('/imgs', express.static('public/imgs'));
 
@@ -42,7 +42,7 @@ app.post('/add', function (req, res) {
         amount: req.body.amount,
         description: req.body.description
     }).then(function () {
-        //redirecionado para home com barras
+        //redirecionado para home
         res.redirect('/');
     }).catch(function (erro) {
         res.send('Houve um erro: ' + erro);
@@ -54,7 +54,7 @@ app.get('/delete/:id', function (req, res) {
     Product.destroy({
         where:{'id': req.params.id}
     }).then(function () {
-        //redirecionado para home com barras
+        //redirecionado para home
         res.redirect('/');
     }).catch(function (erro) {
         res.send('Este produto não existe' + erro);
